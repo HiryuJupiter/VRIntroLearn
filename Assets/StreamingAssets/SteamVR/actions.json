@@ -50,6 +50,10 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/TouchpadAxis",
+      "type": "vector2"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
@@ -169,7 +173,8 @@
       "/actions/default/in/SnapTurnRight": "Snap Turn (Right)",
       "/actions/default/in/Grab": "Grab",
       "/actions/default/in/Interact": "Interact",
-      "/actions/default/in/Pointer": "Pointer"
+      "/actions/default/in/Pointer": "Pointer",
+      "/actions/default/in/TouchpadAxis": "TouchpadPosition"
     }
   ]
 }

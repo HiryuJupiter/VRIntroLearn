@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 410654203450530401}
   - component: {fileID: 410654203450530400}
+  - component: {fileID: 5781025577941625994}
+  - component: {fileID: 6623612384648175465}
   m_Layer: 0
   m_Name: ControllerLeft
   m_TagString: Untagged
@@ -65,6 +67,30 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   broadcastDeviceChanges: 1
+--- !u!114 &5781025577941625994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410654203450530402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25beb21fea91a254692fb65395fba1a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6623612384648175465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410654203450530402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a524eac1b7952054fb9e5b48c4802773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &410654203814871331
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,6 +103,7 @@ GameObject:
   - component: {fileID: 410654203814871328}
   - component: {fileID: 410654203814871329}
   - component: {fileID: 410654203814871330}
+  - component: {fileID: 2297721852934394791}
   m_Layer: 0
   m_Name: VRCameraRig
   m_TagString: Untagged
@@ -177,6 +204,22 @@ MonoBehaviour:
   - {x: -2.15, y: 0.01, z: -1.65}
   - {x: -2.15, y: 0.01, z: 1.65}
   - {x: 2.15, y: 0.01, z: 1.65}
+--- !u!114 &2297721852934394791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410654203814871331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8de7a89acfd774fb1608962ec81770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftController: {fileID: 6623612384648175465}
+  rightController: {fileID: 6486765083616082951}
+  headset: {fileID: 410654204519226865}
+  playerArea: {fileID: 410654203814871343}
 --- !u!1 &410654204484439980
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +230,8 @@ GameObject:
   m_Component:
   - component: {fileID: 410654204484439979}
   - component: {fileID: 410654204484439978}
+  - component: {fileID: 6218585522727104746}
+  - component: {fileID: 6486765083616082951}
   m_Layer: 0
   m_Name: ControllerRight
   m_TagString: Untagged
@@ -242,6 +287,30 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   broadcastDeviceChanges: 1
+--- !u!114 &6218585522727104746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410654204484439980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25beb21fea91a254692fb65395fba1a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6486765083616082951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410654204484439980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a524eac1b7952054fb9e5b48c4802773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &410654204519226866
 GameObject:
   m_ObjectHideFlags: 0
