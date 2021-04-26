@@ -6,7 +6,7 @@ using Valve.VR;
 namespace BreadAndButter.VR.Interaction
 {
     [RequireComponent(typeof(Rigidbody))]
-    public class interactableObject : MonoBehaviour
+    public class InteractableObject : MonoBehaviour
     {
         public Rigidbody Rigidbody => rigidbody;
         public Collider Collider => collider;

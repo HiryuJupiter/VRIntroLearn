@@ -20,8 +20,8 @@ namespace BreadAndButter.VR.Interaction
         public InteractionEvent released = new InteractionEvent();
 
         private VRControllerInput input;
-        private interactableObject collidingObject;
-        private interactableObject heldObject;
+        private InteractableObject collidingObject;
+        private InteractableObject heldObject;
 
         void Start()
         {
@@ -34,7 +34,7 @@ namespace BreadAndButter.VR.Interaction
 
             input.OnGrabReleased.AddListener(
                 (_arg) => {
-                    if (collidingObject != null)
+                    if (heldObject != null)
                         ReleaseObject();
                 });
         }
@@ -49,7 +49,7 @@ namespace BreadAndButter.VR.Interaction
 
         private void SetCollidingObject(Collider _other)
         {
-            interactableObject interactable = _other.GetComponent<interactableObject>();
+            InteractableObject interactable = _other.GetComponent<InteractableObject>();
 
             if (collidingObject != null || interactable == null) //We only want to handle the first thing we collide with
                 return;
@@ -59,7 +59,7 @@ namespace BreadAndButter.VR.Interaction
 
         private void OnTriggerExit (Collider _other)
         {
-            if (collidingObject == _other.GetComponent<interactableObject>())
+            if (collidingObject == _other.GetComponent<InteractableObject>())
                 collidingObject = null;
         }
         #endregion
@@ -70,8 +70,10 @@ namespace BreadAndButter.VR.Interaction
             if (collidingObject == null)
                 return;
 
+            Debug.Log("HELLO");
             heldObject = collidingObject;
             collidingObject = null;
+            heldObject.Rigidbody.useGravity = false;
             FixedJoint joint = AddJoint(heldObject.Rigidbody);
 
             if (heldObject.AttachPoint != null)
@@ -93,6 +95,7 @@ namespace BreadAndButter.VR.Interaction
 
         private void ReleaseObject ()
         {
+            heldObject.Rigidbody.useGravity = true;
             RemoveJoint(gameObject.GetComponent<FixedJoint>());
             released.Invoke(new InteractEventArgs(input.Controller, heldObject.Rigidbody, heldObject.Collider));
             heldObject.OnObjectReleased(input.Controller);
@@ -102,9 +105,9 @@ namespace BreadAndButter.VR.Interaction
         private FixedJoint AddJoint (Rigidbody _rigidbody)
         {
             FixedJoint joint = gameObject.AddComponent<FixedJoint>();
-            joint.connectedBody = _rigidbody;
             joint.breakForce = 20000;
             joint.breakTorque = 20000;
+            joint.connectedBody = _rigidbody;
             return joint;
         }
 

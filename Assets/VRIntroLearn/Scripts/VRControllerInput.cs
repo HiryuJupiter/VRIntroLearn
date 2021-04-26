@@ -61,12 +61,12 @@ namespace BreadAndButter.VR
             //Link callback to the steam events
             pointer.AddOnStateDownListener(OnPointerDown, controller.InputSource);
             pointer.AddOnStateUpListener(OnPointerUp, controller.InputSource);
-            pointer.AddOnStateDownListener(OnTeleportDown, controller.InputSource);
-            pointer.AddOnStateUpListener(OnTeleportUp, controller.InputSource);
-            pointer.AddOnStateDownListener(OnInteractDown, controller.InputSource);
-            pointer.AddOnStateUpListener(OnInteractUp, controller.InputSource);
-            pointer.AddOnStateDownListener(OnGrabDown, controller.InputSource);
-            pointer.AddOnStateUpListener(OnGrabUp, controller.InputSource);
+            teleport.AddOnStateDownListener(OnTeleportDown, controller.InputSource);
+            teleport.AddOnStateUpListener(OnTeleportUp, controller.InputSource);
+            interact.AddOnStateDownListener(OnInteractDown, controller.InputSource);
+            interact.AddOnStateUpListener(OnInteractUp, controller.InputSource);
+            grab.AddOnStateDownListener(OnGrabDown, controller.InputSource);
+            grab.AddOnStateUpListener(OnGrabUp, controller.InputSource);
             touchpadAxis.AddOnChangeListener(OnTouchpadChanged, controller.InputSource);
         }
 

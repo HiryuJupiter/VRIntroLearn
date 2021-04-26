@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 410654203450530400}
   - component: {fileID: 5781025577941625994}
   - component: {fileID: 6623612384648175465}
+  - component: {fileID: 1263074083280191999}
+  - component: {fileID: 5570657093370391817}
   m_Layer: 0
   m_Name: ControllerLeft
   m_TagString: Untagged
@@ -79,6 +81,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25beb21fea91a254692fb65395fba1a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointer:
+    actionPath: /actions/default/in/Pointer
+    needsReinit: 0
+  teleport:
+    actionPath: /actions/default/in/Teleport
+    needsReinit: 0
+  interact:
+    actionPath: /actions/default/in/InteractUI
+    needsReinit: 0
+  grab:
+    actionPath: /actions/default/in/Grab
+    needsReinit: 0
+  touchpadAxis:
+    actionPath: /actions/default/in/TouchpadAxis
+    needsReinit: 0
+  onPointerPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onPointerReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  onTeleportPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onTeleportReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  onInteractPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onInteractReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  onGrabPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onGrabReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  onTouchpadAxisChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6623612384648175465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +135,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a524eac1b7952054fb9e5b48c4802773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &1263074083280191999
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410654203450530402}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.11
+  m_Center: {x: 0, y: 0, z: -0.1}
+--- !u!114 &5570657093370391817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410654203450530402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5465128f6c50ee44497a98fd2ab8ec0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabbed:
+    m_PersistentCalls:
+      m_Calls: []
+  released:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &410654203814871331
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,6 +307,8 @@ GameObject:
   - component: {fileID: 410654204484439978}
   - component: {fileID: 6218585522727104746}
   - component: {fileID: 6486765083616082951}
+  - component: {fileID: 7638613209467776251}
+  - component: {fileID: 7327465087477898750}
   m_Layer: 0
   m_Name: ControllerRight
   m_TagString: Untagged
@@ -299,6 +376,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25beb21fea91a254692fb65395fba1a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointer:
+    actionPath: /actions/default/in/Pointer
+    needsReinit: 0
+  teleport:
+    actionPath: /actions/default/in/Teleport
+    needsReinit: 0
+  interact:
+    actionPath: /actions/default/in/InteractUI
+    needsReinit: 0
+  grab:
+    actionPath: /actions/default/in/Grab
+    needsReinit: 0
+  touchpadAxis:
+    actionPath: /actions/default/in/TouchpadAxis
+    needsReinit: 0
+  onPointerPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onPointerReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  onTeleportPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onTeleportReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  onInteractPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onInteractReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  onGrabPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onGrabReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  onTouchpadAxisChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6486765083616082951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +430,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a524eac1b7952054fb9e5b48c4802773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &7638613209467776251
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410654204484439980}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.11
+  m_Center: {x: 0, y: 0, z: -0.1}
+--- !u!114 &7327465087477898750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410654204484439980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5465128f6c50ee44497a98fd2ab8ec0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabbed:
+    m_PersistentCalls:
+      m_Calls: []
+  released:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &410654204519226866
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012125075130, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.6488531
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000012125075130, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
       propertyPath: m_LocalPosition.y
@@ -432,7 +582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012125075130, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.28451347
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000012125075130, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
       propertyPath: m_LocalRotation.w
@@ -460,6 +610,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012125075130, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012051789102, guid: 6def53d002137b747aec0b29551e0e25,
+        type: 3}
+      propertyPath: updatePose
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000012051789102, guid: 6def53d002137b747aec0b29551e0e25,
@@ -492,7 +647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013303659494, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5516324
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000013303659494, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -500,7 +655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013303659494, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.63726306
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000013303659494, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -528,6 +683,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013303659494, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013038800862, guid: 638779290bce1af49b356f33dcc6fccf,
+        type: 3}
+      propertyPath: updatePose
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000013038800862, guid: 638779290bce1af49b356f33dcc6fccf,
