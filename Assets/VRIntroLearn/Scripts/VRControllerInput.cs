@@ -68,7 +68,16 @@ namespace BreadAndButter.VR
             grab.AddOnStateDownListener(OnGrabDown, controller.InputSource);
             grab.AddOnStateUpListener(OnGrabUp, controller.InputSource);
             touchpadAxis.AddOnChangeListener(OnTouchpadChanged, controller.InputSource);
+
+            OnGrabPressed.AddListener((args) => Dummy());
+
+            //OnGrabPressed += Dummy;
+            //pointer.AddOnStateDownListener(
+            //   (SteamVR_Action_Boolean action, SteamVR_Input_Sources source) => onGrabPressed.Invoke(GenerateArgs()),
+            //   controller.InputSource);
         }
+
+        void Dummy() { }
 
         /// <summary>
         /// Sets up an instance of InputEventArgs based on the controller and touchpad values.
